@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script>
+      function getWord(){
+        var words = document.getElementsByName("words")[0].value;
+        var email = document.getElementById("email").value;
+        var fav_language= document.querySelector('input[name="fav_language"]:checked').value;
+        var wordCount = words.trim().split(/\s+/).length;
+        var output = document.getElementById("output");
+        output.innerHTML = "You entered " + wordCount + " words. Your rate that you gave my resume was " + fav_language + ". Your email was " + email + ".";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>FeedBack Form</h1>
+    <form>
+      <p id = "title">Please enter a message for me about your questions for my resume</p>
+      <input type="text" name="words" required>
+      <p>Please rate me on how well my resume looks</p>
+      <input type="radio" id="html" name="fav_language" value="1">
+      <label for="html">1</label><br>
+      <input type="radio" id="css" name="fav_language" value="2">
+      <label for="css">2</label><br>
+      <input type="radio" id="javascript1" name="fav_language" value="3">
+      <label for="javascript1">3</label><br>
+      <input type="radio" id="javascript2" name="fav_language" value="4">
+      <label for="javascript2">4</label><br>
+      <input type="radio" id="javascript3" name="fav_language" value="5">
+      <label for="javascript3">5</label><br>
+      <p>Please enter your email</p>
+      <input type="email" id="email" name="email">
+      <button type="button" onclick="getWord()">Submit Form</button>
+    </form>
+    <span id = "output"></span>
+  </body>
+</html>
