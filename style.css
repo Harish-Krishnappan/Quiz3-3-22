@@ -34,11 +34,12 @@ p{
 }
 
 #output{
-  color: blueviolet;
+  color: blue;
   font-size: large;
   text-align: center;
-  align-items: center;
-  padding-left: 22%;
+  font-size: 30px;
+  padding-left: 15px;
+  padding-bottom: 20px;
 }
 h1{
   color: blueviolet;
